@@ -1,6 +1,6 @@
 {
   "name": "superchat",
-    "homepage": "https://iampawan31.github.io/superchat",
+  "homepage": "https://iampawan31.github.io/superchat",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
