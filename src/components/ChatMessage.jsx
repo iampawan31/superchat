@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ChatMessage = ({ message, currentUser }) => {
-  const { text, uid, photoURL } = message
+  const { text, photoURL } = message
   const messageClass = ''
   return (
     <div className={`message ${messageClass}`}>
