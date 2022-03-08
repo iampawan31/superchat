@@ -28,7 +28,9 @@ const App = () => {
       setMessages(data)
     })
 
-    return unsubscribe
+    return () => {
+      unsubscribe()
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -45,7 +47,9 @@ const App = () => {
     })
 
     // Cleanup subscription
-    return unsubscribe
+    return () => {
+      unsubscribe()
+    }
   }, [initializing])
 
   return (
