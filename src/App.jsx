@@ -10,6 +10,7 @@ import ChatRoom from './components/ChatRoom'
 import SignIn from './components/SignIn'
 import { auth, db } from './firebase-config'
 import Header from './components/Header'
+import MobileHeader from './components/MobileHeader'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -51,14 +52,15 @@ const App = () => {
     <div className="App">
       <div className="h-screen min-h-fit bg-black text-white">
         <Header user={user} />
-        <div className="bg-white shadow rounded-lg min-h-fit w-2/3 -m-28 h-screen-75 container mx-auto">
+        <div className="bg-white md:shadow md:rounded-lg min-h-screen md:min-h-fit md:w-2/3 md:-m-28 h-screen md:h-screen-75 container mx-auto">
+          <MobileHeader user={user} />
           {user ? (
             <ChatRoom messages={messages} currentUser={user} />
           ) : (
             <SignIn />
           )}
         </div>
-        <div className="fixed bottom-0 left-0 right-0 text-center w-full">
+        <div className="hidden md:block fixed bottom-0 left-0 right-0 text-center w-full">
           Pawan Kumar - {new Date().getFullYear()}
         </div>
       </div>

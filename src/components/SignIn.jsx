@@ -20,11 +20,11 @@ const SignIn = () => {
   }
 
   return (
-    <div className="container mx-auto min-h-fit h-full">
+    <div className="container mx-auto h-auto md:min-h-fit md:h-full">
       <div className="text-3xl pt-24 text-primary text-center font-bold">
         Sign-in to start chat
       </div>
-      <div className="mx-auto w-1/3">
+      <div className="mx-auto px-2 md:px-0 md:w-1/3">
         <div className="mb-2">
           <label htmlFor="email">Email</label>
           <select

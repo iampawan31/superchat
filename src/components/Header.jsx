@@ -3,10 +3,10 @@ import { logout } from '../firebase-config'
 
 const Header = ({ user }) => {
   return (
-    <div className="h-60 bg-primary">
-      <div className="container mx-auto px-24 pt-10">
+    <div className="hidden md:block md:h-60 bg-primary">
+      <div className="container mx-auto md:px-24 md:pt-10">
         <div className="flex justify-between">
-          <div className="text-3xl font-semibold">Chat Web</div>
+          <div className="md:text-3xl font-semibold">Chat Web</div>
           {user && (
             <div>
               <button

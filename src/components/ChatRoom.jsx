@@ -32,10 +32,10 @@ const ChatRoom = ({ messages, currentUser }) => {
             })}
           <span ref={dummy}></span>
         </div>
-        <div className="">
+        <div className="relative">
           <form onSubmit={sendMessage} method="post" className="flex">
             <input
-              className="flex flex-grow"
+              className="flex flex-grow bg-primary"
               type="text"
               value={formValue}
               onChange={(e) => setFormValue(e.target.value)}
