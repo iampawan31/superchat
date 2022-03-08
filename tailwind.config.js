@@ -24,6 +24,9 @@ module.exports = {
         'screen/5': 'calc(100vh / 5)',
         'screen-110': '110vh',
       }),
+      fontSize: () => ({
+        tiny: '.6rem',
+      }),
     },
   },
   plugins: [],

@@ -52,13 +52,15 @@ const App = () => {
     <div className="App">
       <div className="h-screen min-h-fit bg-black text-white">
         <Header user={user} />
-        <div className="bg-white md:shadow md:rounded-lg min-h-screen md:min-h-fit md:w-2/3 md:-m-28 h-screen md:h-screen-75 container mx-auto">
-          <MobileHeader user={user} />
-          {user ? (
-            <ChatRoom messages={messages} currentUser={user} />
-          ) : (
-            <SignIn />
-          )}
+        <div className="flex justify-center">
+          <div className="bg-white md:shadow md:rounded-lg min-h-screen md:min-h-fit md:w-2/3 md:-m-28 h-screen md:h-screen-75 container mx-auto">
+            <MobileHeader user={user} />
+            {user ? (
+              <ChatRoom messages={messages} currentUser={user} />
+            ) : (
+              <SignIn />
+            )}
+          </div>
         </div>
         <div className="hidden md:block fixed bottom-0 left-0 right-0 text-center w-full">
           Pawan Kumar - {new Date().getFullYear()}
